@@ -1,0 +1,22 @@
+<h1>Welcome to Safemails.Net Authentication Page</h1>
+
+To see the message, please enter Google Authenticator PIN below:<br>
+
+<form action="{% url 'auth_post' %}" method="POST">
+    {% csrf_token %}
+<p>
+<table border="1">
+    {{ otp }}
+</table>
+</p>
+    <input type="submit" value="DECRYPT"><br><br>
+    <!--Encrypted message sent to you looks like this: <b>{{ str_email_content }}</b><br><br>-->
+    
+<b>NEW SAFEMAILS.NET USERS ONLY:<br></b>
+1. Download Google Authenticator from Google Play Store or Apple App Store; <br>
+2. Scan the QR-code below;<br>
+<br>To get Google Authenticator PINs on another device do new users procedure again.<br>
+    <img src= "{{ qr_code }}" alt="OTP auth">
+</form>
+-----------------------------------------------------------------<br>
+Powered by Safemails.Net. The Painless Decryption.

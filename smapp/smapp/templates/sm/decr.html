@@ -1,0 +1,8 @@
+<h1>Welcome to Safemails.Net Decryption Page</h1>
+<h5>FROM:</h5> {{ sender }}<br><br>
+<h5>SUBJECT:</h5> {{ subject }}<br><br>
+<h5>DDECRYPTED EMAIL MESSAGE:</h5> {{ email_content|linebreaks }}<br><br>
+<a href="{% url 'send' %}">Encrypted Replay</a><br>
+<br><br>
+-----------------------------------------------------------------<br>
+Powered by Safemails.Net. The Painless Decryption.

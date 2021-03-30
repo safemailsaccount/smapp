@@ -1,0 +1,15 @@
+<h1>Send Encrypted Email</h1>
+
+<h2>{{ note }}</h2>
+
+<form action="{% url 'send' %}" method="POST">
+    {% csrf_token %}
+<p>
+<table border="1">
+    {{ sem }}
+</table>
+</p>
+    <input type="submit" value="Send Encrypted Email">
+</form>
+-----------------------------------------------------------------<br>
+Powered by Safemails.Net. The Painless Decryption.
